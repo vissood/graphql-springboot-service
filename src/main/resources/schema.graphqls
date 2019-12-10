@@ -1,0 +1,19 @@
+type Query {
+  productById(id: ID): Product 
+}
+
+type Product {
+  id: String
+  name: String
+  mrp: Float
+  sp: Float
+}
+
+input Item {
+	id: String
+  	quantity: Int
+}
+
+type Mutation {
+  placeOrder(items: [Item]): String
+}
